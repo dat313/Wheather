@@ -3,7 +3,7 @@ import Location from './Location';
 import WheatherData from './WeatherData';
 const WeatherLocation =()=>(
     <div>
-    <Location></Location>
+    <Location city={"Mexico"}></Location>
     <WheatherData></WheatherData>    
     </div>
     );
