@@ -1,5 +1,6 @@
 import React from 'react';
 import WeatherIcons from 'react-weathericons';
+import './WeatherLocation/WeatherData/styles.css';
 import PropTypes from 'prop-types';
 const icons={
     cloud:"cloud",
@@ -12,16 +13,17 @@ const icons={
 };
 const getWeatherIcon=weatherState=>{
     const icon= icons[weatherState];
+    const sizeIcon="4x";
     if(icon)
-    return <WeatherIcons name={icon}  size="2x" />
+    return <WeatherIcons className="wicon" name={icon}  size={sizeIcon} />
     else
-        return <WeatherIcons name={"day-sunny"}  size="2x" />
+        return <WeatherIcons className="wicon" name={"day-sunny"}  size={sizeIcon} />
 }
 const WheatherTemperature=({temperature, weatherState})=>(
-    <div>
+    <div className="weatherTemperatureCont">
         {getWeatherIcon(weatherState)}
 
-        <span>{" "+temperature + "C°"}</span>
+        <span className="temperature">{" "+temperature+ " "}</span><span className="temperatureType">C°</span>
     </div>
 );
 WheatherTemperature.propTypes={
