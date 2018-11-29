@@ -10,12 +10,13 @@ import {CLOUD,
 } from '../../../constants/weather';
 import './styles.css';
 
-const WheatherData = () => (
+const WheatherData = ({data:{temperature, weatherState, humidity, wind}}) => {
+    return (
     <div className="weatherDataCont">
-        <WheatherTemperature temperature={30} weatherState={CLOUDY}/>
-        <WheatherExtraInfo humidity={80} wind={"10 m/s"}/>
+        <WheatherTemperature temperature={temperature} weatherState={weatherState}/>
+        <WheatherExtraInfo humidity={humidity} wind={wind}/>
     </div>
 
 
-);
+)};
 export default WheatherData;
