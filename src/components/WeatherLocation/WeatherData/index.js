@@ -15,6 +15,7 @@ const WheatherData = ({data:{temperature, weatherState, humidity, wind}}) => {
     <div className="weatherDataCont">
         <WheatherTemperature temperature={temperature} weatherState={weatherState}/>
         <WheatherExtraInfo humidity={humidity} wind={wind}/>
+
     </div>
 
 
